@@ -65,7 +65,14 @@ function initGalaxyCanvas() {
     }));
   }
 
-  function draw() {
+  const frameInterval = 1000 / 30;
+  let lastFrame = 0;
+
+  function draw(now) {
+    requestAnimationFrame(draw);
+    if (now - lastFrame < frameInterval) return;
+    lastFrame = now;
+
     ctx.clearRect(0, 0, w, h);
     for (const s of stars) {
       s.twinkle += 0.02;
@@ -77,7 +84,6 @@ function initGalaxyCanvas() {
       s.y -= s.speed;
       if (s.y < -5) { s.y = h + 5; s.x = Math.random() * w; }
     }
-    requestAnimationFrame(draw);
   }
 
   resize();
