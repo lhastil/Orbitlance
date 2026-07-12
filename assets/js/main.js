@@ -28,9 +28,8 @@ function initCustomCursor() {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
-  });
+    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+  }, { passive: true });
 
   document.querySelectorAll('a, button, .planet-card, input, textarea').forEach((el) => {
     el.addEventListener('mouseenter', () => ring.classList.add('active'));
@@ -40,8 +39,7 @@ function initCustomCursor() {
   (function loop() {
     ringX += (mouseX - ringX) * 0.16;
     ringY += (mouseY - ringY) * 0.16;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
+    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
     requestAnimationFrame(loop);
   })();
 }
