@@ -18,17 +18,27 @@ function initCustomCursor() {
 
   const dot = document.createElement('div');
   dot.className = 'cursor-dot';
+  dot.style.opacity = '0';
   const ring = document.createElement('div');
   ring.className = 'cursor-ring';
+  ring.style.opacity = '0';
   document.body.append(dot, ring);
 
   let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
   let ringX = mouseX, ringY = mouseY;
+  let hasMoved = false;
 
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
     dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    if (!hasMoved) {
+      hasMoved = true;
+      ringX = mouseX;
+      ringY = mouseY;
+      dot.style.opacity = '';
+      ring.style.opacity = '';
+    }
   }, { passive: true });
 
   document.querySelectorAll('a, button, .planet-card, input, textarea').forEach((el) => {
