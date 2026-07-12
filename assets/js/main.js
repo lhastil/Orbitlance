@@ -61,29 +61,41 @@ function initGalaxyCanvas() {
       y: Math.random() * h,
       r: Math.random() * 1.4 + 0.3,
       speed: Math.random() * 0.15 + 0.02,
-      twinkle: Math.random() * Math.PI * 2,
+      phase: Math.random() < 0.5 ? 0 : 1,
     }));
   }
 
   const frameInterval = 1000 / 30;
   let lastFrame = 0;
+  let twinkle = 0;
+
+  function drawBucket(phase, alpha) {
+    ctx.beginPath();
+    for (const s of stars) {
+      if (s.phase !== phase) continue;
+      ctx.moveTo(s.x + s.r, s.y);
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    }
+    ctx.globalAlpha = alpha;
+    ctx.fill();
+  }
 
   function draw(now) {
     requestAnimationFrame(draw);
     if (now - lastFrame < frameInterval) return;
     lastFrame = now;
 
-    ctx.clearRect(0, 0, w, h);
+    twinkle += 0.02;
     for (const s of stars) {
-      s.twinkle += 0.02;
-      const alpha = 0.4 + Math.sin(s.twinkle) * 0.35;
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${Math.max(alpha, 0.05)})`;
-      ctx.fill();
       s.y -= s.speed;
       if (s.y < -5) { s.y = h + 5; s.x = Math.random() * w; }
     }
+
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#ffffff';
+    drawBucket(0, Math.max(0.4 + Math.sin(twinkle) * 0.35, 0.05));
+    drawBucket(1, Math.max(0.4 + Math.sin(twinkle + Math.PI) * 0.35, 0.05));
+    ctx.globalAlpha = 1;
   }
 
   resize();
