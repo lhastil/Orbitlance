@@ -296,6 +296,9 @@ section { position: relative; z-index: 2; }
 }
 .mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
 .mobile-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 14px 6px;
   font-family: var(--font-head);
   font-weight: 600;
@@ -303,8 +306,11 @@ section { position: relative; z-index: 2; }
   color: var(--white);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+.mobile-menu a svg { width: 18px; height: 18px; flex-shrink: 0; opacity: .8; }
 .mobile-menu a:hover,
 .mobile-menu a.active { color: var(--cyan); }
+.mobile-menu a:hover svg,
+.mobile-menu a.active svg { opacity: 1; }
 
 @media (max-width: 900px) {
   .nav-right { display: none; }
@@ -315,15 +321,22 @@ section { position: relative; z-index: 2; }
   .nav-left .nav-pill { padding: 0; gap: 0; background: none; border: none; }
   .nav-left .nav-link:not(:first-child) { display: none; }
   .nav-left .nav-link:first-child {
+    position: relative;
     width: 44px; height: 44px;
     padding: 0;
     font-size: 0;
-    justify-content: center;
+    gap: 0;
     border-radius: 50%;
     background: linear-gradient(135deg, rgba(33, 94, 244, 0.12), rgba(13, 27, 76, 0.04));
     border: 1px solid rgba(33, 94, 244, 0.22);
   }
-  .nav-left .nav-link:first-child svg { width: 18px; height: 18px; opacity: 1; }
+  .nav-left .nav-link:first-child svg {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px; height: 18px;
+    opacity: 1;
+  }
   .nav-left .nav-link:first-child:hover,
   .nav-left .nav-link:first-child.active {
     background: linear-gradient(135deg, var(--blue-light), var(--blue));
