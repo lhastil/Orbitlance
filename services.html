@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Orbitlance</title>
+<meta name="description" content="AI agents, business automation and custom web development services from Orbitlance.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="bg-fixed">
+  <canvas id="galaxy-canvas"></canvas>
+  <div class="glow-orb o1"></div>
+  <div class="glow-orb o2"></div>
+  <div class="orbit-ring r1"></div>
+  <div class="orbit-ring r2"></div>
+  <div class="orbit-ring r3"></div>
+  <div class="tech-particle" style="top:16%; left:10%; animation-delay:0s;"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg" alt="OpenAI"></div>
+  <div class="tech-particle" style="top:24%; left:84%; animation-delay:1.2s;"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/vercel.svg" alt="Vercel"></div>
+  <div class="tech-particle" style="top:70%; left:8%; animation-delay:2.4s;"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/laravel.svg" alt="Laravel"></div>
+  <div class="tech-particle" style="top:80%; left:86%; animation-delay:.6s;"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/mysql.svg" alt="MySQL"></div>
+</div>
+
+<header class="navbar">
+  <div class="nav-left">
+    <div class="nav-pill">
+    <a href="index.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+      Home
+    </a>
+    <a href="contact.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      Contact
+    </a>
+    </div>
+  </div>
+
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="Orbitlance"></a>
+
+  <nav class="nav-right">
+    <div class="nav-pill">
+      <a href="services.html" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Services
+      </a>
+      <a href="portfolio.html" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Portfolio
+      </a>
+      <a href="about.html" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        About
+      </a>
+    </div>
+  </nav>
+
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main>
+
+  <section class="page-hero reveal">
+    <div class="container">
+      <span class="eyebrow">What We Offer</span>
+      <h1>Intelligent Solutions for Modern Businesses</h1>
+      <p>We build AI-powered software, automation systems, and custom web applications that help businesses reduce manual work, improve efficiency, and scale with confidence.</p>
+    </div>
+  </section>
+
+  <div class="section-head center reveal" style="padding-top:20px;">
+    <span class="eyebrow">What We Build</span>
+    <h2 class="section-title">Our Services</h2>
+  </div>
+
+  <!-- ----------------------------- AI Assistants ----------------------------- -->
+  <section class="page-pad" style="padding-top:20px;">
+    <div class="container grid-2" style="align-items:end;">
+      <div class="reveal">
+        <div class="planet-orb" style="margin:0 0 26px;">
+          <span class="service-icon" style="font-size:40px; position:relative; z-index:2; animation-delay:0s;">🤖</span>
+        </div>
+        <span class="eyebrow">01 · AI Assistants</span>
+        <h2 class="section-title">AI Assistants That Never Sleep</h2>
+        <p class="section-sub" style="max-width:none;">Give your business a dedicated AI assistant that works around the clock. From answering customer questions and managing bookings to tracking orders and handling repetitive requests, our AI assistants are trained around your business and continuously improved as your needs evolve.</p>
+      </div>
+      <div class="card reveal service-card">
+        <h4>Perfect for</h4>
+        <ul class="service-list">
+          <li>Customer Support</li>
+          <li>Reception &amp; Bookings</li>
+          <li>Sales Assistance</li>
+          <li>Order Tracking</li>
+          <li>Frequently Asked Questions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------ AI Automation ----------------------------- -->
+  <section class="page-pad" style="padding-top:0;">
+    <div class="container grid-2" style="align-items:end;">
+      <div class="card reveal service-card" style="order:2;">
+        <h4>We automate</h4>
+        <ul class="service-list">
+          <li>Internal Workflows</li>
+          <li>CRM Processes</li>
+          <li>Email &amp; Notifications</li>
+          <li>Document Processing</li>
+          <li>Team Operations</li>
+        </ul>
+      </div>
+      <div class="reveal" style="order:1;">
+        <div class="planet-orb" style="margin:0 0 26px;">
+          <span class="service-icon" style="font-size:40px; position:relative; z-index:2; animation-delay:.3s;">⚙️</span>
+        </div>
+        <span class="eyebrow">02 · AI Automation</span>
+        <h2 class="section-title">Automate the Work That Slows You Down</h2>
+        <p class="section-sub" style="max-width:none;">Stop spending valuable time on repetitive tasks. We design intelligent automations that connect your existing tools, eliminate manual processes, and keep your business running more efficiently with minimal human intervention.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------------- Custom CRM Systems --------------------------- -->
+  <section class="page-pad" style="padding-top:0;">
+    <div class="container grid-2" style="align-items:end;">
+      <div class="reveal">
+        <div class="planet-orb" style="margin:0 0 26px;">
+          <span class="service-icon" style="font-size:40px; position:relative; z-index:2; animation-delay:.6s;">📊</span>
+        </div>
+        <span class="eyebrow">03 · Custom CRM Systems</span>
+        <h2 class="section-title">A CRM Built Around Your Business</h2>
+        <p class="section-sub" style="max-width:none;">Every business works differently, so your CRM should too. Instead of forcing you to adapt to generic software, we build CRM systems tailored to your workflow, making it easier to manage customers, sales, projects, and daily operations from one place.</p>
+      </div>
+      <div class="card reveal service-card">
+        <h4>Features include</h4>
+        <ul class="service-list">
+          <li>Customer &amp; Lead Management</li>
+          <li>Sales Pipelines</li>
+          <li>Reporting &amp; Analytics</li>
+          <li>Task &amp; Team Management</li>
+          <li>Custom Dashboards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------------- Custom Software Development ---------------------- -->
+  <section class="page-pad" style="padding-top:0;">
+    <div class="container grid-2" style="align-items:end;">
+      <div class="card reveal service-card" style="order:2;">
+        <h4>Examples</h4>
+        <ul class="service-list">
+          <li>Business Platforms</li>
+          <li>Client Portals</li>
+          <li>Booking Systems</li>
+          <li>Dashboards</li>
+          <li>SaaS Applications</li>
+        </ul>
+      </div>
+      <div class="reveal" style="order:1;">
+        <div class="planet-orb" style="margin:0 0 26px;">
+          <span class="service-icon" style="font-size:40px; position:relative; z-index:2; animation-delay:.9s;">💻</span>
+        </div>
+        <span class="eyebrow">04 · Custom Software Development</span>
+        <h2 class="section-title">Custom Software That Solves Real Problems</h2>
+        <p class="section-sub" style="max-width:none;">Whether you need an internal management system, a client portal, or a complete business platform, we build scalable software designed specifically for your goals. No unnecessary features—just solutions that help your business grow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------ Web Development ---------------------------- -->
+  <section class="page-pad" style="padding-top:0;">
+    <div class="container grid-2" style="align-items:end;">
+      <div class="reveal">
+        <div class="planet-orb" style="margin:0 0 26px;">
+          <span class="service-icon" style="font-size:40px; position:relative; z-index:2; animation-delay:1.2s;">🌐</span>
+        </div>
+        <span class="eyebrow">05 · Web Development</span>
+        <h2 class="section-title">Websites Designed to Leave a Lasting Impression</h2>
+        <p class="section-sub" style="max-width:none;">Your website is often the first interaction customers have with your business. We design and develop modern, high-performance websites that not only look great but also build trust, strengthen your brand, and turn visitors into customers.</p>
+      </div>
+      <div class="card reveal service-card">
+        <h4>We build</h4>
+        <ul class="service-list">
+          <li>Corporate Websites</li>
+          <li>Landing Pages</li>
+          <li>E-commerce Stores</li>
+          <li>Portfolio Websites</li>
+          <li>CMS Solutions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------- Industries We Serve ------------------------ -->
+  <section class="page-pad" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Who We Work With</span>
+        <h2 class="section-title">Industries We Serve</h2>
+      </div>
+      <div class="tag-row reveal">
+        <span class="tag">Hotels &amp; Hospitality</span>
+        <span class="tag">Restaurants &amp; Cafés</span>
+        <span class="tag">E-commerce</span>
+        <span class="tag">Logistics &amp; Transportation</span>
+        <span class="tag">Healthcare &amp; Labs</span>
+        <span class="tag">Real Estate</span>
+        <span class="tag">Professional Services</span>
+        <span class="tag">Small &amp; Medium Businesses</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------------------- FAQ ---------------------------------- -->
+  <section class="page-pad" style="padding-top:0;">
+    <div class="container" style="max-width:820px; margin:0 auto;">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Questions</span>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="reveal">
+        <details class="faq-item">
+          <summary>How long does a project take?</summary>
+          <p class="faq-answer">Most projects launch within 2–6 weeks depending on complexity. After our discovery call, we'll give you a clear timeline before any work begins.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can you integrate with our existing CRM?</summary>
+          <p class="faq-answer">Yes. We connect with most popular CRMs and business tools, and can also extend or migrate your existing systems as needed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you provide post-launch support?</summary>
+          <p class="faq-answer">Absolutely. Ongoing support, monitoring and improvements are part of how we work — we don't disappear after launch.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can AI be customized for our business?</summary>
+          <p class="faq-answer">Yes — every AI solution we build is trained and tailored around your business, data and workflows, not a generic off-the-shelf bot.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span>Orbitlance</span>
+        </div>
+        <p class="footer-desc">Where Ideas Come Alive</p>
+        <div class="footer-badges">
+          <span class="tag">24/7 AI Availability</span>
+          <span class="tag">100% Custom Solutions</span>
+          <span class="tag">Global Remote Services</span>
+          <span class="tag">Custom Web Design</span>
+        </div>
+      </div>
+      <div class="footer-col footer-contact-col">
+        <div class="footer-workflow" aria-hidden="true">
+          <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg">
+            <line class="wf-spoke" x1="160" y1="40" x2="30" y2="150"/>
+            <line class="wf-spoke" x1="160" y1="40" x2="100" y2="90"/>
+            <line class="wf-spoke" x1="160" y1="40" x2="170" y2="150"/>
+            <line class="wf-spoke" x1="160" y1="40" x2="240" y2="90"/>
+            <line class="wf-spoke" x1="160" y1="40" x2="290" y2="150"/>
+
+            <path class="wf-line" d="M30,150 Q65,90 100,90 Q135,150 170,150 Q205,90 240,90 Q265,150 290,150"/>
+
+            <g class="wf-hub">
+              <circle class="wf-hub-ring" cx="160" cy="40" r="34"/>
+              <circle cx="160" cy="40" r="24"/>
+              <text class="wf-icon" x="160" y="47" text-anchor="middle">🤖</text>
+            </g>
+            <text class="wf-label" x="160" y="82" text-anchor="middle">AI Engine</text>
+
+            <g class="wf-node n1"><circle cx="30" cy="150" r="21"/><text class="wf-icon" x="30" y="157" text-anchor="middle">⚡</text></g>
+            <text class="wf-label" x="30" y="188" text-anchor="middle">Trigger</text>
+
+            <g class="wf-node n2"><circle cx="100" cy="90" r="21"/><text class="wf-icon" x="100" y="97" text-anchor="middle">🗂️</text></g>
+            <text class="wf-label" x="100" y="60" text-anchor="middle">Collect</text>
+
+            <g class="wf-node n3"><circle cx="170" cy="150" r="21"/><text class="wf-icon" x="170" y="157" text-anchor="middle">🧠</text></g>
+            <text class="wf-label" x="170" y="188" text-anchor="middle">AI Logic</text>
+
+            <g class="wf-node n4"><circle cx="240" cy="90" r="21"/><text class="wf-icon" x="240" y="97" text-anchor="middle">🔁</text></g>
+            <text class="wf-label" x="240" y="60" text-anchor="middle">Automate</text>
+
+            <g class="wf-node n5"><circle cx="290" cy="150" r="21"/><text class="wf-icon" x="290" y="157" text-anchor="middle">📬</text></g>
+            <text class="wf-label" x="290" y="188" text-anchor="middle">Deliver</text>
+
+            <circle class="wf-packet p1" r="4">
+              <animateMotion dur="4.5s" repeatCount="indefinite" path="M30,150 Q65,90 100,90 Q135,150 170,150 Q205,90 240,90 Q265,150 290,150"/>
+            </circle>
+            <circle class="wf-packet p2" r="3.5">
+              <animateMotion dur="4.5s" begin="2.25s" repeatCount="indefinite" path="M30,150 Q65,90 100,90 Q135,150 170,150 Q205,90 240,90 Q265,150 290,150"/>
+            </circle>
+          </svg>
+        </div>
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="mailto:info@orbitlance.tech">info@orbitlance.tech</a></li>
+          <li><a href="tel:+19292425722">+1 929-242-5722 (US)</a></li>
+          <li><a href="tel:+37444072702">+374 44 07 27 02 (Armenia)</a></li>
+        </ul>
+        <div class="social-row">
+          <a class="social-icon" href="https://github.com/lhastil" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.97 3.22 9.18 7.7 10.67.56.1.77-.24.77-.54v-1.9c-3.13.68-3.79-1.5-3.79-1.5-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.4-1.22.72-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.12 1.16a10.8 10.8 0 0 1 5.68 0c2.17-1.46 3.12-1.16 3.12-1.16.61 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.27-5.15 5.55.41.35.77 1.04.77 2.1v3.11c0 .3.2.65.78.54A11.02 11.02 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/hasti-ahmadi-95b256347/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://wa.me/19292425722" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2.003c-5.545 0-10.037 4.492-10.037 10.037 0 1.77.464 3.5 1.345 5.019L2 22.03l5.106-1.34a9.99 9.99 0 0 0 4.934 1.31h.004c5.545 0 10.037-4.493 10.037-10.037 0-2.68-1.044-5.199-2.94-7.096a9.98 9.98 0 0 0-7.097-2.94zm.001 1.803c2.216 0 4.299.863 5.866 2.43a8.24 8.24 0 0 1 2.427 5.868c0 4.573-3.72 8.294-8.297 8.294a8.27 8.27 0 0 1-4.223-1.155l-.303-.18-3.037.797.81-2.963-.198-.305a8.24 8.24 0 0 1-1.267-4.417c0-4.575 3.721-8.296 8.296-8.296zm-4.868 4.68c-.164 0-.43.061-.656.306-.225.245-.86.84-.86 2.048 0 1.207.88 2.373 1.002 2.538.123.164 1.716 2.762 4.259 3.762 2.105.833 2.534.667 2.992.626.458-.041 1.478-.605 1.686-1.19.208-.583.208-1.083.146-1.19-.062-.104-.226-.166-.472-.29-.246-.123-1.478-.73-1.706-.813-.229-.083-.396-.124-.562.124-.166.246-.643.812-.789.978-.145.166-.29.187-.536.062-.246-.124-1.04-.383-1.98-1.221-.732-.653-1.226-1.46-1.371-1.705-.144-.246-.015-.379.109-.502.111-.111.246-.29.37-.436.123-.145.164-.247.246-.412.083-.166.041-.31-.02-.436-.062-.124-.562-1.352-.77-1.852-.203-.487-.41-.42-.562-.428a9.42 9.42 0 0 0-.478-.012z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Orbitlance. All rights reserved.</span>
+      <span>Designed with orbit-grade precision.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="invite-popup" id="invite-popup">
+  <button class="invite-close" id="invite-close" aria-label="Close">&times;</button>
+  <span class="invite-tag"><span class="dot"></span>Incoming Transmission</span>
+  <div class="invite-orbit">
+    <div class="ring"></div>
+    <div class="emoji">🚀</div>
+  </div>
+  <h3>Not sure which service fits your business?</h3>
+  <p>Tell us what you're working on and we'll recommend the right starting point — no pressure, just a clear plan.</p>
+  <a href="contact.html" class="btn btn-primary">Get a Free Consultation</a>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
